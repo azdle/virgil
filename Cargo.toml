@@ -1,0 +1,15 @@
+[package]
+name = "virgil"
+version = "0.1.0"
+description = "A Static Site Generator"
+authors = ["Patrick Barrett <patrick@mkii.org>"]
+repository = "https://github.com/azdle/virgil"
+license = "MIT/Apache-2.0"
+
+[dependencies]
+docopt = "0.6"
+rustc-serialize = "0.3"
+walkdir = "0.1"
+pulldown-cmark = "0.0"
+mustache = "0.6"
+yaml-rust = "0.3"
