@@ -144,8 +144,6 @@ pub mod builders {
                     .recursive(true)
                     .create(out_path.parent().unwrap()).expect("couldn't create directory");
 
-                println!("{} -> {} ({})", in_path.to_str().unwrap(), out_path.to_str().unwrap(), rel_path.to_str().unwrap());
-
                 fs::copy(in_path, out_path).expect("couldn't copy static file");
             }
         }
