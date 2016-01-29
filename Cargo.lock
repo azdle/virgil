@@ -3,6 +3,7 @@ name = "virgil"
 version = "0.1.0"
 dependencies = [
  "docopt 0.6.78 (registry+https://github.com/rust-lang/crates.io-index)",
+ "frontmatter 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "mustache 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "pulldown-cmark 0.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-serialize 0.3.16 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -31,6 +32,14 @@ dependencies = [
  "regex 0.1.48 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-serialize 0.3.16 (registry+https://github.com/rust-lang/crates.io-index)",
  "strsim 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "frontmatter"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "yaml-rust 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]

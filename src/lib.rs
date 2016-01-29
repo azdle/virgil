@@ -4,6 +4,7 @@ extern crate pulldown_cmark;
 extern crate mustache;
 extern crate yaml_rust;
 extern crate core;
+extern crate frontmatter;
 
 pub mod builders {
     use walkdir::DirEntry;
@@ -49,6 +50,7 @@ pub mod builders {
         use mustache;
         use yaml_rust::Yaml;
         use builders;
+        use frontmatter;
 
         pub fn build(directory: &Path, config: &Yaml) {
             let templates_dir = config["templates_dir"].as_str().unwrap_or("_templates");
@@ -80,9 +82,17 @@ pub mod builders {
                 let mut contents = String::new();
                 file.read_to_string(&mut contents).expect("couldn't read file");
 
+                // parse frontmatter
+                let (matter_maybe, content_start) = frontmatter::parse_and_find_content(&contents).expect("couldn't parse frontmatter");
+                match matter_maybe {
+                    Some(matter) => println!("Found Matter: {:?}", matter),
+                    None => println!("No matter found")
+                }
+                //assert!(matter.as_hash().is_some());
+
                 // convert markdown to html
-                let mut html = String::with_capacity(contents.len() * 3/2);
-                let parsed = pulldown_cmark::Parser::new_ext(&contents, pulldown_cmark::Options::empty());
+                let mut html = String::with_capacity(content_start.len() * 3/2);
+                let parsed = pulldown_cmark::Parser::new_ext(&content_start, pulldown_cmark::Options::empty());
                 pulldown_cmark::html::push_html(&mut html, parsed);
 
                 // wrap post body with html page template
