@@ -1,6 +1,9 @@
 Virgil
 ======
 
+[![Build Status](https://travis-ci.org/azdle/virgil.svg?branch=master)](https://travis-ci.org/azdle/virgil)
+[![Crates.io Link](http://meritbadge.herokuapp.com/virgil)](https://crates.io/crates/virgil)
+
 Yet another static site generator, this time written in rust.
 
 Status
