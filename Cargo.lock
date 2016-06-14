@@ -7,7 +7,7 @@ dependencies = [
  "mustache 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "pulldown-cmark 0.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-serialize 0.3.16 (registry+https://github.com/rust-lang/crates.io-index)",
- "walkdir 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "walkdir 0.1.5 (git+https://github.com/azdle/walkdir.git)",
  "yaml-rust 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -123,7 +123,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "walkdir"
 version = "0.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/azdle/walkdir.git#7fc4ba589e17fc89ba1c4b26a1c6adc471476286"
 dependencies = [
  "kernel32-sys 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
