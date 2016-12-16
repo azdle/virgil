@@ -9,7 +9,7 @@ license = "MIT/Apache-2.0"
 [dependencies]
 docopt = "0.6"
 rustc-serialize = "0.3"
-walkdir = { git = "https://github.com/azdle/walkdir.git" }
+walkdir = "1"
 pulldown-cmark = "0.0"
 mustache = "0.6"
 yaml-rust = "0.3"
