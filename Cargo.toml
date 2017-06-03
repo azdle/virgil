@@ -5,6 +5,7 @@ description = "A Static Site Generator"
 authors = ["Patrick Barrett <patrick@mkii.org>"]
 repository = "https://github.com/azdle/virgil"
 license = "MIT/Apache-2.0"
+readme = "README.md"
 
 [dependencies]
 docopt = "0.6"
