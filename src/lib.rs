@@ -83,12 +83,7 @@ pub mod builders {
                 file.read_to_string(&mut contents).expect("couldn't read file");
 
                 // parse frontmatter
-                let (matter_maybe, content_start) = frontmatter::parse_and_find_content(&contents).expect("couldn't parse frontmatter");
-                match matter_maybe {
-                    Some(matter) => println!("Found Matter: {:?}", matter),
-                    None => println!("No matter found")
-                }
-                //assert!(matter.as_hash().is_some());
+                let (_matter_maybe, content_start) = frontmatter::parse_and_find_content(&contents).expect("couldn't parse frontmatter");
 
                 // convert markdown to html
                 let mut html = String::with_capacity(content_start.len() * 3/2);
