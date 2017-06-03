@@ -1,6 +1,6 @@
 [package]
 name = "virgil"
-version = "0.2.2"
+version = "0.2.3"
 description = "A Static Site Generator"
 authors = ["Patrick Barrett <patrick@mkii.org>"]
 repository = "https://github.com/azdle/virgil"
